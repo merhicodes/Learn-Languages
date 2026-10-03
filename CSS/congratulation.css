@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+/* h1{background-color: #000;} */
+.video-container {
+  background: linear-gradient(180deg, #000, rgb(5, 39, 80));
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 30px;
+  font-family: 'Alex Brush', 'Sacramento';
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+}
+
+h1 span {
+  font-size: 1.4em;
+  animation: glow 3s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+
+}
+
+@keyframes glow {
+  0% {
+    color: #fff;
+    filter: hue-rotate(0deg);
+    text-shadow:
+      0 0 10px #03fcf8,
+      0 0 20px #03fcf8,
+      0 0 40px #03fcf8,
+      0 0 80px #03fcf8,
+      0 0 160px #03fcf8,
+      0 0 200px #03fcf8,
+      0 0 300px #03fcf8;
+  }
+
+  30%,
+  70% {
+    color: #fff;
+    filter: hue-rotate(360deg);
+    text-shadow:
+      0 0 10px #03fcf8,
+      0 0 20px #03fcf8,
+      0 0 40px #03fcf8,
+      0 0 80px #03fcf8,
+      0 0 160px #03fcf8,
+      0 0 200px #03fcf8,
+      0 0 300px #03fcf8;
+  }
+
+  100% {
+    color: #fff;
+    text-shadow: none;
+    filter: hue-rotate(0deg);
+  }
+}
+
+.photo {
+  width: 250px;
+  height: 250px;
+  /* background-color: #fff; */
+  background: url("../sources/blue3.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#finish {
+  text-decoration: none;
+  background-color: #ff4603;
+  background-color: #009dff;
+  width: 200px;
+  height: 40px;
+  margin: 15px 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+}
+
+#finish:hover {
+  background-color: #ff7c02;
+  background-color: #00d5ff;
+}
+
+h5 {
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+#down {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.fa-arrow-left {
+  color: #000;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: arow-left 1s linear 1 forwards;
+}
+
+@keyframes arow-left {
+  0% {
+    color: #000;
+  }
+
+  100% {
+    color: #fff;
+  }
+}

@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(145deg, rgba(10, 182, 255), rgb(7, 1, 33));
+    height: 100vh;
+}
+
+.main {
+    top: 0vh;
+}
+
+label {
+    text-align: center;
+}
+
+button[type="submit"] {
+    width: 70px;
+    height: 30px;
+    font-size: large;
+    font-weight: 700;
+}
+
+button[type="submit"]:hover {
+    color: #eee;
+}

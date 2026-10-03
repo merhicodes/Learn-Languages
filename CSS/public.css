@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: 500;
+    color: aliceblue;
+    overflow:hidden;
+}
+body{
+    /* background: linear-gradient(145deg,#0ab6ff,rgb(7, 1, 33)); */
+    background-color: #101022;
+    background-color: #1a1a1a;
+    background: url("../sources/last.jpeg") no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    height: 100vh;
+}
+header{
+    position: fixed;    
+    z-index: 999;
+    background: rgb(255, 69, 0);
+    background-color: #009dff;
+    height: 40px;
+    width: 100%;
+}
+header ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header a{cursor: pointer;}
+header a li{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .7s;
+}
+header a li:hover{
+    transform: scale(1.2);
+}
+header a{    
+    flex: 1;
+    text-align: center;
+    padding: 7px;
+    border: 1px solid rgb(163, 46, 3);
+    background-color: #057dc7;
+}
+.active{
+    background-color:rgb(255, 0, 0);
+    background-color: #009dff;
+    color: #000;
+}
+.back_a{
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: #475454;
+    color: #43a8a6;
+    opacity: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.back_a:hover{
+    opacity: 1;
+    background-color: #252f2f;
+    color: #02fcf8;
+}

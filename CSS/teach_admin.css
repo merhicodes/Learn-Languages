@@ -1,0 +1,109 @@
+/* Container for the whole layout */
+.container {
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+/* teacher form */
+.hierarchy-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.hierarchy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.node {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1DA1F2;
+    /* Twitter-like blue color */
+    color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 90;
+}
+
+.node:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(29, 161, 242, 0.5);
+}
+
+.children,
+.sub-children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Lines between nodes */
+/*
+#t1::before,#t2::before
+,#t3::before,#t4::before,
+#t5::before,#admin::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #029dfe;
+    box-shadow: 
+    0px 0px 30px #029dfe,
+    0px 0px 60px #029dfe,
+    0px 0px 120px #029dfe,
+    0px 0px 240px #029dfe;
+}
+#t1::before{
+    top: -150px;
+    left: 150%;
+    transform: rotate(60deg);
+    height: 210px;
+}
+#t2::before{
+    top: -80px;
+    left: 100%;
+    transform: rotate(40deg);
+    height: 100px;
+}
+#t3::before{
+    height: 50px;
+    top: -50px;
+}
+#t4::before{
+    top: -80px;
+    left: 10%;
+    transform: rotate(-50deg);
+    height: 100px;
+}
+#t5::before{
+    top: -150px;
+    left: -50%;
+    transform: rotate(-60deg);
+    height: 210px;
+}
+#admin::after{
+    height: 50px;
+    bottom: -25px;
+}

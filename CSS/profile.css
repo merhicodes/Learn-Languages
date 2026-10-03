@@ -1,0 +1,146 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    /* background-color: #fffefe; */
+    border: 2px solid #00e1ff;
+    box-shadow: 0 0 20px rgba(0, 193, 237, 0.758);
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+    min-width: 350px;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.headir {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #00e1ff;
+}
+
+.center table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.center td {
+    padding: 10px;
+    color: #333;
+    color: #00e1ff;
+
+}
+.center tr{
+    border-bottom: 1px solid #ddd;
+}
+.center .t2 {
+    text-align: right;
+    color: #555;
+    color: #00e1ff;
+}
+
+.center td:first-child {
+    font-weight: 500;
+}
+
+.center td:last-child {
+    color: #007bff;
+    color: #00e1ff;
+}
+#verifiy:disabled{
+    color: #f01026;
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.foot button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit {
+    background-color: #007bff;
+    color: #fff;
+}
+.edit:hover{
+    background-color: #0059ff;
+}
+.logout {
+    background-color: #dc3545;
+    color: #fff;
+}
+.logout:hover{
+    background-color: #f01026;
+}
+/* --------------- */
+.icon{
+    width: 50px;height: 50px;
+    border: 1px solid #0059ff;
+    /* box-shadow: 0px 10px rgb(174, 172, 172); */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+/*  --- verified ------- */
+.custom-checkbox {
+    appearance: initial;
+    width: 20px;
+    height: 20px;
+    /* background-color: #fff; */
+    /* border: 2px solid #ccc; */
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    /* cursor: pointer; */
+}
+
+.custom-checkbox:checked {
+    background-color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.custom-checkbox:checked::after {
+    content: '\2713';
+    /* 
+    Cross mark (✗): \2717
+    Star (★): \2605
+    Heart (♥): \2665
+    Check mark in a box (☑): \2611
+    Circle (●): \25CF
+     */
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

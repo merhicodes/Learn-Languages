@@ -1,0 +1,142 @@
+form {
+    background: #0175fa;
+    /* background: #; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 400px;
+    overflow-y: auto;
+}
+.main {
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 100vh;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(68, 67, 67, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .6s;
+    z-index: 11;
+}
+.fa-square-plus {
+    font-size: 20px;
+    color: rgb(250, 120, 0);
+    position: fixed;
+    top: 10vh;
+    right: 20px;
+    cursor:pointer;
+    z-index: 10;
+}
+
+.fa-times {
+    font-size: xx-large;
+    cursor: pointer;
+    z-index: 999;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+}
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label {
+    width: 30%;
+    margin-right: 10px;
+    text-align: right;
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 65%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+button[type="button"] {
+    background-color: #06b6d4;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: #0284c7;
+}
+
+button[type="submit"] {
+    background-color: #06b6d4;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0284c7;
+}
+
+.key-value-pair {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.key-value-pair input {
+    width: 45%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.fa-trash {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+}
+
+#keyValuePairsContainer {
+    margin-top: 15px;
+}
+
+/* key value */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.key-value-pair {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.key-value-pair input {
+    margin-right: 10px;
+}
+
+.delete-icon {
+    cursor: pointer;
+    color: red;
+}

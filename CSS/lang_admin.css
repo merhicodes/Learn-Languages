@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #08121e;
+    color: #fff;
+    height: 100vh;
+}
+.switch {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the span inside the switch */
+.switch span {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1DA1F2;
+    color: white;
+    border-radius: 25px;
+    border: 2px solid #1A91DA;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the span */
+.switch span:hover {
+    background-color: #1A91DA;
+    transform: scale(1.05);
+}
+
+/* Optional: Active state for better feedback */
+.switch span:active {
+    background-color: #187BB7; 
+    transform: scale(0.98); /* Slightly shrink on click*/
+}
+
+
+/* ------------------------ */
+.lang,.teach {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    margin: 20px 0; 
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+/* Style for the table */
+.dispaly_lang {
+    width: 100%;
+    max-width: 750px;
+    border-collapse: collapse; /* Merge table borders */
+    font-family: Arial, sans-serif; /* Font style */
+    text-align: center;
+}
+
+/* Style for table headers */
+.dispaly_lang thead th {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Style for table cells */
+.dispaly_lang tbody td {
+    font-size: large;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+.dispaly_lang tbody td:hover {
+ background-color: #bebebe;
+ color: #000;  
+}
+/* Hover effect for table rows */
+.dispaly_lang tbody tr:hover {
+    background-color: #e3e3e3; /* Light background on hover */
+    color: #000;
+    cursor: pointer;
+}
+
+/* Style for delete and edit buttons */
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn.delete {
+    background-color: #e05555; /* Red background for delete */
+    color: white; /* White text color */
+    text-decoration: none;
+}
+
+.btn.edit {
+    background-color: #028dff; /* Blue background for edit */
+    color: white;
+    text-decoration: none;
+}
+.btn.delete,
+.btn.edit{
+    opacity: .8;
+}
+.btn.delete:hover,
+.btn.edit:hover {
+    opacity: 1;
+}
+/*  add a language */
+.rel{
+    position: relative;
+}
+.rel *{
+    position: absolute;
+    top: -25px;
+    right: 30px;
+    font-size: large;
+    cursor: pointer;
+    z-index: 99;
+    transition: all .4s;
+    /* animation: rot 2s forwards infinite; */
+}
+.rel *:hover{
+    color:#1DA1F2;
+}
+/* --------lang form --------- */
+.form-container {
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: all .5s;
+}
+
+/* Style for the table */
+.user-selection-table {
+    min-width: 500px;
+    min-height: 200px;
+    background-color: #111111;    
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-collapse: collapse; /* Merge table borders */
+    font-family: Arial, sans-serif; 
+}
+
+/* Style for table cells */
+.user-selection-table tr {
+    border-bottom: 1px solid #474747;
+}
+.user-selection-table tr:last-child{
+    border-bottom:none;
+}
+.user-selection-table td{
+    padding: 10px 20px;
+}
+.user-selection-table .name_td{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+.lang_name{
+    background-color: #08121e;
+    outline: none;
+    color: #fff;
+    text-align: center;
+    width: 90%;
+    padding: 0 10px;
+    border-radius: 25px;
+}
+/* Hide radio buttons */
+.hidden-radio {
+    display: none;
+}
+
+/* Style for labels to look like buttons */
+.selection-label {
+    display: block;
+    background-color: #0d9df7; /* Twitter-like blue color */
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Change background color on hover */
+.selection-label:hover {
+    background-color: #1A91DA; /* Darker blue */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Change background color and shrink on active state */
+.hidden-radio:checked + .selection-label {
+    background-color: #05649f; /* Darker blue */
+    transform: scale(0.98); /* Slightly shrink on click */
+}
+
+/* Style for the email cells */
+.email-cell {
+    text-align: center;
+    min-width: 160px;
+}
+
+/* Style for the submit button */
+.submit-button {
+    background-color: #1DA1F2; /* Twitter-like blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #1A91DA; /* Darker blue */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.submit-button:active {
+    background-color: #187BB7; /* Even darker blue */
+    transform: scale(0.98); /* Slightly shrink on click */
+}

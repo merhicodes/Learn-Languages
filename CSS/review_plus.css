@@ -1,0 +1,89 @@
+body{
+    overflow-y: scroll;
+}
+.main_folders {
+    position: fixed;
+    left: 0px;
+    top: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(82, 82, 82, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: all.5s;
+}
+
+.unit {
+    width: 300px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 5px double black;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: large;
+    position: relative;
+}
+
+.unit label {
+    color: #000;
+}
+
+.unit input {
+    outline: none;
+    height: 25px;
+    width: 150px;
+    border: 1px solid black;
+    color: #000;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.unit input[type="submit"] {
+    height: 30px;
+}
+
+.unit input[type="submit"]:hover {
+    background-color: #ddd;
+}
+
+.fa-times {
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    color: #000;
+    cursor: pointer;
+}
+.center_child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#not_admins{
+    margin-bottom: 20px;
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#contact_admin{
+    text-decoration: none;
+    width: 200px;
+    height: 50px;
+    font-size: x-large;
+    background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+}
+#contact_admin:hover{
+    background-color: #ff6a00;
+    color: #eee;
+}

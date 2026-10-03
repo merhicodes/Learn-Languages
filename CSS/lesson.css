@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    background-color: #101022;
+    /* background: linear-gradient(145deg, rgba(10, 182, 255), rgb(7, 1, 33)); */
+}
+
+header {
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+header a {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+main {
+    min-height: 100vh;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 550px;
+    /* background-color: rgba(255, 255, 255, .6); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    /* box-shadow: 0 0 10px #; */
+    border-radius: 10px;
+    width: 85%;
+    max-width: 700px;
+    /* position: relative; */
+    background-color: #11243e;
+    border: 1px solid #01285c;
+}
+
+.embed_con {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.embed_con embed {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+}
+
+.embed_con h3 {
+    position: absolute;
+    left: 455px;
+    top: 2vh;
+    width: 50px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    z-index: 999;
+}
+
+.container video {
+    width: 90%;
+    max-width: max-content;
+    max-height: 250px;
+    border: 2px solid #232020;
+    border-radius: 5px;
+    margin: 0 80px;
+}
+
+.container .title {
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    font-family: 'Segoe UI', Tahoma;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    /* color: orangered; */
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    color: #009dff;
+}
+
+.container>a {
+    text-decoration: none;
+    color: white;
+    background-color: #072f6b;
+    width: 60%;
+    height: 50px;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all .6s;
+}
+
+.container a:hover {
+    transform: scale(1.05);
+}
+
+#finish {
+    background-color: orangered;
+    background-color: #009dff;
+    margin-bottom: 50px;
+}
+
+.container h3 a {
+    text-decoration: none;
+    color: #fff;
+}

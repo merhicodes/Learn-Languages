@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(145deg, rgba(10, 182, 255), rgb(7, 1, 33)); */
+    min-height: 100vh;
+    background-color: #152943;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.fa-square-plus {
+    font-size: 20px;
+    color: rgb(250, 120, 0);
+    color: #009dff;
+    cursor: pointer;
+}
+
+header {
+    /* background-color: blue; */
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    margin-bottom: 20px;
+}
+
+header>p {
+    margin: 0 20px;
+}
+
+#marg {
+    height: 80px;
+}
+
+.first_row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+i {
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sup_cont {
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cont {
+    width: 300px;
+    height: 350px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+
+.word {
+    width: 120px;
+    height: 120px;
+    background-color: #e4e3e3;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all .5s;
+    position: relative;
+}
+
+.word .inner_word {
+    background-color: #e4e3e3;
+    width: 100%;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    padding: 14px;
+    overflow: hidden;
+}
+/* ------------------------------ */
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Style when checkbox is checked */
+input[type="checkbox"]:checked+.word {
+    border: 1px solid red;
+    background-color: #009dff;
+    box-shadow:inset 0 0 5px #015a91;
+}
+
+/* Toggle the checkbox when clicking on the word */
+.word::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* --------------------- */
+.sup_cont a {
+    background-color: orangered;
+    background-color: #009dff;
+    width: 80%;
+    height: 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: #fff;
+    transition: all .3s;
+}
+
+.sup_cont a:hover {
+    transform: scale(1.06);
+}
+.word{
+    cursor: pointer;
+}
+.word:hover {
+    transform: scale(1.07);
+}
+.selected {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    z-index: 99px;
+    background-color: rgba(32, 31, 31, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    opacity: 0;
+}
+
+.selected .fas {
+    color: #fff;
+    font-size: 30px;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    position: fixed;
+    left: 0px;
+    top: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: all .6s;
+}
+.main .on_adding {
+    background-color: #fff;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100%;
+}
+select ,option {
+    width: 200px;
+    text-align: center;
+    height: 35px;
+    outline: none;
+    background-color: #6b6b6b;
+    color: #fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+input[type="submit"] {
+    width: 150px;
+    min-height: 40px;
+    margin-bottom: 30px;
+    background-color: orangered;
+    background-color: #009dff;
+    color: #fff;
+    font-size: large;
+    border-radius: 5px;
+    border: none;
+    transition: all .4s;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+.head {
+    position: relative;
+    width: 100%;
+}
+
+.head .fa-times {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}

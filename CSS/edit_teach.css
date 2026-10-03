@@ -1,0 +1,146 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.teacher-info {
+    margin-bottom: 20px;
+}
+
+.teacher-info p {
+    margin: 5px 0;
+    color: #9ee7fe;
+}
+.teacher-info p span {
+    margin: 0 15px;
+}
+fieldset {
+    border-radius: 5px;
+    padding: 10px;
+    /* border: none; */
+}
+
+legend {
+    padding: 0 10px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.admin-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.radio-label input[type="radio"] {
+    accent-color: #007bff; /* Blue color */
+    margin-right: 10px;
+}
+
+/* .custom-radio {
+    display: none;
+} */
+
+.name, .email {
+    flex: 1;
+    text-align: center;
+    color: #9ee7fe;
+}
+.fa-arrow-left{
+    color: #9ee7fe;
+}
+.see-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #007bff; /* Blue color */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.see-button:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+/* ------ */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+.custom-radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    margin-right: 10px;
+    position: relative;
+}
+
+/* border: 1px solid #00c8ff;    
+box-shadow: 0 0 15px #009dff; */
+.radio-label input[type="radio"]:checked+.custom-radio {
+    background-color: #007bff;
+}
+
+
+.radio-label input[type="radio"]:checked+.custom-radio::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.radio-group:hover {
+    border: 1px solid #00c8ff;
+    box-shadow: 0 0 15px #009dff;
+}
